@@ -1,0 +1,16 @@
+---
+project: example
+configVersion: 1
+---
+image: builder
+context: .
+dockerfile: .werf/builder/builder.Dockerfile
+---
+image: nginx
+context: .
+dockerfile: .werf/nginx/nginx.Dockerfile
+dependencies:
+  - image: builder
+    imports:
+      - type: ImageName
+        targetBuildArg: BUILDER_IMAGE_NAME

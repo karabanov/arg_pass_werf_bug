@@ -1,0 +1,15 @@
+---
+giterminismConfigVersion: 1
+
+helm:
+  allowUncommittedFiles:
+    - .helm/Chart.lock
+    - .helm/charts/*.tgz
+
+config:
+  goTemplateRendering:
+    allowEnvVariables:
+      - /^CI_.*/
+      - /^WERF_.*/
+      - /^KUBE_.*/
+      - /^APP_.*/

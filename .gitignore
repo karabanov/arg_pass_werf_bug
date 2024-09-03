@@ -1,0 +1,6 @@
+.helm/Chart.lock
+.helm/charts/*.tgz
+
+/.werf-deploy-report.json
+/.werf-build-report.json
+/.werf_secret_key
